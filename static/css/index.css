@@ -1,0 +1,97 @@
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+textarea, input { outline: none; }
+
+html {
+	font-size: 62.5%;
+    font-family: Roboto;
+}
+
+p {
+    font-size: 1.9rem;
+    color: #2c3e50;
+    font-weight: 400;
+}
+
+label {
+    font-size: 1.6rem;
+    color: #2c3e50;
+    font-weight: 400;
+    display: block;
+    text-align: center;
+}
+
+h2 {
+    font-size: 3.4rem;
+    color: #2c3e50;
+    font-weight: 400;
+    text-align: center;
+    margin: 45px 0;
+}
+
+/* input {
+    display: block;
+    margin: 0 auto;
+} */
+
+.input-holder {
+    margin: 0 auto;
+    width: 250px;
+}
+
+span {
+    font-size: 1.6rem;
+    color: #2c3e50;
+    font-weight: lighter;
+    display: block;
+    margin: 0.9rem auto;
+    text-align: center;
+    
+}
+
+.new-file-input {
+    font-size: 1.9rem;
+    width: 100%;
+    background-color: rgba(255, 107, 129,1.0);
+    color: white;
+    padding: 1rem 3rem;
+    border-radius: 0.3rem;
+    cursor: pointer;
+    margin: 0 auto;
+}
+
+.button-holder {
+    width: 450px;
+    margin: 35px auto;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.email-label {
+    text-align: initial;
+    width: 100%;
+    margin-bottom: 15px;
+}
+
+.email-input {
+    width: 80%;
+    height: 35px;
+    padding-left: 10px;
+    border-radius: 3px 0 0 3px;
+    /* border: solid 1px #718093; */
+    border: 0;
+    background-color: #f9f9f9;
+}
+
+.send-button {
+    width: 20%;
+    border-radius: 0 3px 3px 0;
+    border: solid 1px rgba(255, 107, 129,1.0);
+    background: rgba(255, 107, 129,1.0);
+    color: white;
+    cursor: pointer;
+}

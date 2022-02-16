@@ -1,0 +1,9 @@
+django==3.2.10
+wheel==0.37.0
+mysqlclient==2.1.0
+celery==5.2.1
+google-api-python-client==2.33.0
+django-storages==1.12.3
+google-cloud-storage==1.43.0
+django-celery-results==2.2.0
+gunicorn

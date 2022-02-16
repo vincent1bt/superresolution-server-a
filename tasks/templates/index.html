@@ -1,0 +1,45 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Index</title>
+    <link rel="stylesheet" href="{% static 'css/index.css' %}">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400&display=swap" rel="stylesheet">
+
+  </head>
+  <body>
+    <h2>
+        Enhance Your Anime Images
+    </h2>
+    <form method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+        <div class="input-holder">
+            <input id="actual-btn" type="file" name="images" accept="image/png, image/jpeg" class="custom-file-input" multiple required hidden>
+            <label for="actual-btn" class="new-file-input">Select Your Images</label>
+            <span id="file-chosen">No Images Selected</span>
+        </div>
+
+        <div class="button-holder">
+            <label class="email-label" for="email">We need your email so you can download your images when they are ready</label>
+            <input class="email-input" type="email" name="email" id="" placeholder="Email" required>
+            <input class="send-button" type="submit" value="Send Images">
+        </div>
+    </form>
+
+    <script>
+        const actualBtn = document.getElementById('actual-btn');
+        const fileChosen = document.getElementById('file-chosen');
+
+        actualBtn.addEventListener('change', function(){
+            const name = `${this.files.length} Image(s) Selected`
+            fileChosen.textContent = name
+        });
+
+    </script>
+  </body>
+</html>
