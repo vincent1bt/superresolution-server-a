@@ -25,6 +25,12 @@ class SRTask(models.Model):
     def __str__(self):
         return f"{self.id}-{self.status}"
 
+
+"""
+One default SRSpotServer record with SRSpotServerStatus = OFF is created in migrations so the
+rows can be locked
+"""
+
 class SRSpotServer(models.Model):
     name = models.CharField(max_length=40, blank=False, null=False, unique=True)
     created_at = models.DateTimeField(auto_now_add=True)
